@@ -18,7 +18,7 @@ class FormContainer extends React.Component {
 
                                     <Form.Group className="mb-3" controlId="formContent">
                                         <Form.Label>Content</Form.Label>
-                                        <Form.Control as="textarea" rows={10} />
+                                        <Form.Control as="textarea" rows={10} cols={100} />
                                     </Form.Group>
                                     <Button variant="primary" type="submit">
                                         Submit Blog Post

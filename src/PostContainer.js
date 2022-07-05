@@ -26,15 +26,15 @@ class PostContainer extends React.Component{
     }
 
     render() {
-        console.log(this.state.posts)
+        // console.log(this.state.posts)
 
         var postsPlaceholder = this.state.posts
         var listOfPosts = Object.keys(postsPlaceholder).map(function(k) { return postsPlaceholder[k] });
-        console.log(listOfPosts)
+        // console.log(listOfPosts)
         
         for (var post of listOfPosts) {
-            console.log("Title: " + post.title)
-            console.log("Content: " + post.content)
+            // console.log("Title: " + post.title)
+            // console.log("Content: " + post.content)
         }
 
         return (
@@ -51,7 +51,7 @@ class PostContainer extends React.Component{
                                                 <Typography gutterBottom variant="h5" component="div">
                                                 {data.title}
                                                 </Typography>
-                                                <Typography variant="body2" color="text.secondary">
+                                                <Typography variant="body2" color="text.secondary" align="justify">
                                                 {data.content}
                                                 </Typography>
                                             </CardContent>
@@ -69,25 +69,6 @@ class PostContainer extends React.Component{
                 </Container>
             </div>
         )
-
-        // return (
-        //     <div>
-        //         {/* <Card sx={{ maxWidth: 345 }}>
-        //         <CardContent>
-        //             <Typography gutterBottom variant="h5" component="div">
-        //             {this.state.posts.title}
-        //             </Typography>
-        //             <Typography variant="body2" color="text.secondary">
-        //             {this.state.posts.content}
-        //             </Typography>
-        //         </CardContent>
-        //         <CardActions>
-        //             <Button size="small">Share</Button>
-        //             <Button size="small">Learn More</Button>
-        //         </CardActions>
-        //         </Card> */}
-        //     </div>
-        // )
     }
 }
 

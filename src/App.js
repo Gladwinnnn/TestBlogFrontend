@@ -1,5 +1,4 @@
 import React from "react";
-import FormContainer from "./FormContainer";
 import TabContainer from "./TabContainer";
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -25,16 +24,6 @@ function App() {
                     <Row>
                         <Col>
                             <TabContainer />
-                        </Col>
-                    </Row>
-                </Container>
-            </Container>
-
-            <Container>
-                <Container>
-                    <Row>
-                        <Col>
-                            <FormContainer />
                         </Col>
                     </Row>
                 </Container>
