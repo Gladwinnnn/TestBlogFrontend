@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Form from 'react-bootstrap/Form'
 import { Col, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 function Password(props) {
     return (
@@ -56,10 +57,33 @@ class PasswordContainer extends React.Component {
     }
 
     checkPassword(password) {
-        if (password === 'potato') {
-            return true;
-        }
-        return false;
+        // if (password === 'potato') {
+        //     return true;
+        // }
+        // return false;
+
+        // fetch("http://localhost:8080/authenticate", {
+        //     method: "POST",
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(password)
+        // }).then(function (response) {
+        //     console.log("test");
+        //     console.log(response);
+        //     return response;
+        // });
+        axios.post('http://localhost:8080/authenticate', {
+            password: password
+        })
+            .then(response => {
+                console.log(response.data)
+                this.setState({secretVisible: response.data})
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     handleChange(e) {
