@@ -60,25 +60,12 @@ class PasswordContainer extends React.Component {
         // if (password === 'potato') {
         //     return true;
         // }
-        // return false;
 
-        // fetch("http://localhost:8080/authenticate", {
-        //     method: "POST",
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(password)
-        // }).then(function (response) {
-        //     console.log("test");
-        //     console.log(response);
-        //     return response;
-        // });
         axios.post('http://localhost:8080/authenticate', {
             password: password
         })
             .then(response => {
-                console.log(response.data)
+                // console.log(response.data)
                 this.setState({secretVisible: response.data})
             })
             .catch(function (error) {

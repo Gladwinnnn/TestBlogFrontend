@@ -46,18 +46,18 @@ class PostContainer extends React.Component{
                                 {listOfPosts.map((data, key) => {
                                     return (
                                         <div>
-                                            <Card sx={{ maxWidth: 1500 }}>
-                                            <CardContent>
-                                                <Typography gutterBottom variant="h5" component="div">
-                                                {data.title}
-                                                </Typography>
-                                                <Typography variant="body2" color="text.secondary" align="justify">
-                                                {data.content}
-                                                </Typography>
-                                            </CardContent>
-                                            <CardActions>
-                                                <Button size="large">Leave a Comment</Button>
-                                            </CardActions>
+                                            <Card sx={{ maxWidth: 1500 }} style={{ width: 500}}>
+                                                <CardContent>
+                                                    <Typography gutterBottom variant="h5" component="div">
+                                                    {data.title}
+                                                    </Typography>
+                                                    <Typography variant="body2" color="text.secondary" align="justify">
+                                                    {data.content}
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardActions>
+                                                    <Button size="small">Leave a Comment</Button>
+                                                </CardActions>
                                             </Card>
                                             < br />
                                         </div>
